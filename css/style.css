@@ -260,3 +260,14 @@ button { font: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Fox mask cursor for mouse and trackpad; keep text editing with the native caret. */
+@media (pointer: fine) {
+  html, body,
+  body *:not(input):not(textarea):not([contenteditable]) {
+    cursor: url("../images/main/dream-witness-fox-cursor.png") 16 29, auto;
+  }
+  input, textarea, [contenteditable] {
+    cursor: text;
+  }
+}
